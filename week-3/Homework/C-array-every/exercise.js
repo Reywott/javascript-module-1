@@ -2,10 +2,14 @@
    This program should check if the array `group` contains only students
 */
 
-var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
-var group = ["Austine", "Dany", "Swathi", "Daniel"];
+const students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
+const group = ["Austine", "Dany", "Swathi", "Daniel" ];
 
-var groupIsOnlyStudents; // complete this statement
+const OnlyStudents = group.filter(student => students.includes(student)) 
+
+let groupIsOnlyStudents = group.length == OnlyStudents.length
+
+// groupIsOnlyStudents = group.every(e => students.includes(e))
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");
