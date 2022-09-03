@@ -8,9 +8,13 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(array) {
+  return array.filter(e => {
+    return e[0] == "A" && e.includes("family") 
+  })
 
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -47,3 +51,4 @@ test(
   colonisers(voyagers),
   ["Adam family", "Avery family", "Archer family"]
 )
+console.log(colonisers(voyagers))
